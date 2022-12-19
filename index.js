@@ -15,7 +15,19 @@ app.get("/", (req,res) => {
     res.status(200).json({
         message: "Server is up and running successfully",
     });
+    res.end();
 });
 
 app.use("/users", usersRouter); // http://localhost:8081/users
 app.use("/books", booksRouter); // http://localhost:8081/books
+
+app.get("*",(req,res) => {  // For Routes other than the default route i.e /users & /books
+    res.status(404).json({
+        message: "This route doesn't exist"
+    });
+    res.end();
+});
+
+app.listen(PORT, () => {
+    console.log(`Server is running at port ${PORT}`);
+});
