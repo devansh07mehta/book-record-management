@@ -24,7 +24,7 @@
       },
       {
         "id": "3",
-        "name": "Jane",
+        "name": "Devansh",
         "surname": "Doe",
         "email": "user@email.com",
         "issuedBook": "3",
@@ -35,7 +35,7 @@
       },
       {
         "id": "4",
-        "name": "Jane",
+        "name": "Harsh",
         "surname": "Doe",
         "email": "user@email.com",
         "subscriptionType": "Premium",
