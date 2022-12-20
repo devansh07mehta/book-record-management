@@ -67,9 +67,11 @@ router.post("/", (req,res) => {
       message: "User already exist"
     });
   }
+  
   users.push({
     id,name,surname,email,subscriptionType,subscriptionDate
   });
+
   return res.status(200).json({
     success: true,
     data: users
@@ -84,7 +86,6 @@ router.post("/", (req,res) => {
  * Parameters: id
  */
 
-// Need to implement from here for updating a user data in postman
 router.put("/:id", (req,res) => {
   const {id} = req.params;
   const {data} = req.body;
@@ -93,8 +94,30 @@ router.put("/:id", (req,res) => {
   if(!user){
     return res.status(404).json({
       success: false,
-      message: "User Not Found"
+      message: "User Not Found cannot update the user"
     });
   }
+
+  const UpdatedUser = users.map((each) => {
+    if(each.id === id){
+      return {           // return is the last statement for if so it will not execute ahead so it is assumed to be part of else.
+        ...each,...data  // Spread operators can be used to update or combining the entire object or array.
+      };
+    }
+    return each;
+  });
+  return res.status(200).json({
+    success: true,
+    data: UpdatedUser
+  });
 });
+
+/**
+ * Route: /users/:id
+ * Method: DELETE
+ * Description: Deleting the user by their id
+ * Access: Public
+ * Parameters: id
+ */
+
 module.exports = router;
