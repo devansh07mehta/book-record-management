@@ -4,9 +4,7 @@
   "description": "Book Record Management Appln",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",
-    "lint": "eslint index.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -20,7 +18,9 @@
   "homepage": "https://github.com/devansh07mehta/book-record-management#readme",
   "dependencies": {
     "core-util-is": "^1.0.3",
-    "express": "^4.18.2"
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.8.1"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",

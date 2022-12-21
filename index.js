@@ -1,10 +1,21 @@
 const express = require("express");
 
+// import DB connection file
+const DbConnection = require("./databaseConnection");
+
+// import db
+const dotenv = require("dotenv");
+
 //importing routes
 const usersRouter = require("./routes/users");
 const booksRouter = require("./routes/books");
 
+dotenv.config();
+
 const app = express();
+
+DbConnection();
+
 const PORT = 8081;
 app.use(express.json()); // To transfer the data(i.e response from the server) in the JSON format.
 
