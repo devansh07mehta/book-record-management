@@ -18,11 +18,11 @@
       },
       {
         "id": "3",
-        "name": "The Land Before Time",
-        "author": "Alan Moore",
+        "name": "Atomic Habits",
+        "author": "James Clear",
         "genre": "Fantasy",
-        "price": "12.99",
-        "publisher": "Houghton Mifflin"
+        "price": "16.99",
+        "publisher": "James Clear"
       }
     ]
   }

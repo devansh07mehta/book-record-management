@@ -14,8 +14,8 @@
       {
         "id": "2",
         "name": "Jane",
-        "surname": "Doe",
-        "email": "user@email.com",
+        "surname": "Dora",
+        "email": "newuser@email.com",
         "issuedBook": "2",
         "issuedDate": "01/07/2021",
         "returnDate": "01/10/2021",
@@ -25,8 +25,8 @@
       {
         "id": "3",
         "name": "Devansh",
-        "surname": "Doe",
-        "email": "user@email.com",
+        "surname": "Mehta",
+        "email": "devansh1622mht@gmail.com",
         "issuedBook": "3",
         "issuedDate": "01/07/2021",
         "returnDate": "01/10/2021",
@@ -36,8 +36,8 @@
       {
         "id": "4",
         "name": "Harsh",
-        "surname": "Doe",
-        "email": "user@email.com",
+        "surname": "Patel",
+        "email": "harsh@email.com",
         "subscriptionType": "Premium",
         "subscriptionDate": "01/01/2022"
       }
