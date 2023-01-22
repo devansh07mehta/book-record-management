@@ -18,7 +18,7 @@ exports.getAllBooks = async (req, res) => {
 
 // const getSingleBookById
 exports.getSingleBookById = async (req, res) => {
-  const { id } = req.params;
+  const { id } = await req.params;
 
   const book = await BookModel.findById(id);
 
@@ -54,7 +54,7 @@ exports.getAllIssuedBooks = async (req, res) => {
 };
 
 exports.addNewBook = async (req, res) => {
-  const { data } = req.body;
+  const { data } = await req.body;
   const book = await BookModel.findOne(data);
 
   if (book) {
@@ -88,8 +88,8 @@ exports.addNewBook = async (req, res) => {
 };
 
 exports.updatedBookById = async (req, res) => {
-  const { id } = req.params;
-  const { data } = req.body;
+  const { id } = await req.params;
+  const { data } = await req.body;
 
   if (!data) {
     return res.status(404).json({
@@ -119,7 +119,7 @@ exports.updatedBookById = async (req, res) => {
 };
 
 exports.deleteBookById = async (req, res) => {
-  const { id } = req.params;
+  const { id } = await req.params;
   const book = await BookModel.findById(id);
 
   if (!book) {

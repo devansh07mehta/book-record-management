@@ -18,7 +18,7 @@ exports.getAllUsers = async (req, res) => {
 };
 
 exports.getSingleUserById = async (req, res) => {
-  const { id } = req.params;
+  const { id } = await req.params;
 
   const user = await UserModel.findById({ _id: id });
 
@@ -38,7 +38,7 @@ exports.getSingleUserById = async (req, res) => {
 };
 
 exports.deleteUser = async (req, res) => {
-  const { id } = req.params;
+  const { id } = await req.params;
   const user = await UserModel.findOneAndDelete(id); //deleteOne()
 
   if (!user) {
@@ -55,8 +55,8 @@ exports.deleteUser = async (req, res) => {
 };
 
 exports.updatedUserData = async (req, res) => {
-  const { id } = req.params;
-  const { data } = req.body;
+  const { id } = await req.params;
+  const { data } = await req.body;
   const user = await UserModel.findOneAndUpdate(
     { _id: id },
     { $set: { ...data } },
@@ -77,7 +77,7 @@ exports.updatedUserData = async (req, res) => {
 };
 
 exports.createNewUser = async (req, res) => {
-  const { data } = req.body;
+  const { data } = await req.body;
   const user = await UserModel.findOne(data);
 
   if (user) {
@@ -104,7 +104,7 @@ exports.createNewUser = async (req, res) => {
 };
 
 exports.getSubscriptionDetailsById = async (req, res) => {
-  const { id } = req.params;
+  const { id } = await req.params;
   const user = await UserModel.findById(id);
   if (!user) {
     return res.status(404).json({
@@ -147,7 +147,7 @@ exports.getSubscriptionDetailsById = async (req, res) => {
   const uniquedata = {
     subscriptionExpired:
       subscriptionDate +
-        (subscriptionType(subscriptionDate) - subscriptionDate) <=
+      (subscriptionType(subscriptionDate) - subscriptionDate) <=
       subscriptionExpiration,
     daysLeftForExpiration:
       subscriptionExpiration <= currentdate

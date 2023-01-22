@@ -13,14 +13,14 @@ const router = express.Router(); // We r using router since the app is used only
 // Documentation
 
 /**
- * Route: //users
+ * Route: /users
  * Method: GET
  * Description: Get all the users
  * Access: Public
  * Parameters: none
  */
 
-// http://localhost:8081/users/user
+// http://localhost:8081/users
 router.get("/", getAllUsers);
 
 /**
