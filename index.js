@@ -19,7 +19,7 @@ const app = express();
 
 DbConnection();
 
-const PORT = 8081;
+const PORT = 4000;
 
 app.use(express.json()); // To transfer the data(i.e response from the server) in the JSON format.
 
