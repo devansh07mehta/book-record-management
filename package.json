@@ -1,0 +1,29 @@
+{
+  "name": "book-record-management",
+  "version": "1.0.0",
+  "description": "Book Record Management Appln",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devansh07mehta/book-record-management.git"
+  },
+  "author": "devansh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devansh07mehta/book-record-management/issues"
+  },
+  "homepage": "https://github.com/devansh07mehta/book-record-management#readme",
+  "dependencies": {
+    "docker": "^1.0.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.8.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
